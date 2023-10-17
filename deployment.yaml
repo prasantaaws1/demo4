@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo3
-        image: pkbhub/demo3:latest
+        image: pkbhub/demo3:1
         ports:
           - containerPort: 80
         imagePullPolicy: IfNotPresent
