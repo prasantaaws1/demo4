@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: demo3
+  template:
+    metadata:
+      labels:
+        run: demo3
+    spec:
+      containers:
+      - name: demo3
+        image: pkbhub/demo3:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: IfNotPresent
